@@ -32,16 +32,48 @@
       <div class="right">
         <h5>Carrom - Men</h5>
 
-        <form action="index.php" method="post" class="inputs">
-          <input type="text" placeholder="Name of the Institute" />
-          <input type="text" placeholder="Name of the Participant" />
-          <input type="text" placeholder="Name of the Participant" />
-          <input type="text" placeholder="Name of the Participant" />
+        <form class="inputs" autocomplete="off" id="my_form">
+          <input
+            type="text"
+            name="Institute"
+            placeholder="Name of the Institute"
+          />
+          <input
+            type="text"
+            name="Participant1"
+            placeholder="Name of the Participant"
+          />
+          <input
+            type="text"
+            name="Participant2"
+            placeholder="Name of the Participant"
+          />
+          <input
+            type="text"
+            name="Participant3"
+            placeholder="Name of the Participant"
+          />
+          <input type="submit" value="REGISTER" name="submit" />
         </form>
         <br />
-        <button>REGISTER</button>
       </div>
     </div>
-    <!-- partial -->
+    <script>
+      let form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let data = new FormData(form);
+        fetch(
+          "https://script.google.com/macros/s/AKfycbyMiVj3xZBf1Eew6lNghrJzWRra7p6MFdMd1fh0HS-fNT64TK71u0N43IIsdoRC_VyU/exec",
+          {
+            method: "POST",
+            body: data,
+          }
+        )
+          .then((res) => res.text())
+          .then((data) => alert(data));
+        document.getElementById("myForm").reset();
+      });
+    </script>
   </body>
 </html>
