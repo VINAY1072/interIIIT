@@ -429,7 +429,7 @@ img.pull-left {
   cursor: pointer;
 }
 
-.event-gallery input[type="radio"]:nth-child(5) {
+.event-gallery input[type="radio"]:nth-child(8) {
   margin-right: 0px;
 }
 
@@ -824,10 +824,10 @@ footer {
 
 .footer_left h6 span {
   color: #ff552c;
-  font-size: 32px;
+  font-size: 24px;
 }
 .footer_left h6 {
-  font-size: 32px;
+  font-size: 24px;
   color: #fff;
   margin-bottom: 10px;
 }
