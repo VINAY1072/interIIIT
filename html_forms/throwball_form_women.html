@@ -14,6 +14,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css_files/badm_form.css" />
+    <link rel="stylesheet" href="../css_files/registration_form_styles.css" />
   </head>
 
   <body>
@@ -33,11 +34,118 @@
         <h5>ThrowBall - Women</h5>
 
         <form class="inputs" autocomplete="off" id="my_form">
-          <input
-            type="text"
-            name="Institute"
-            placeholder="Name of the Institute"
-          />
+          <select name="Institute" aria-placeholder="Name of the Institute">
+            <option value="blank" aria-placeholder="Name of the Institute">
+              Name of the Institute
+            </option>
+            <option
+              value="Atal Bihari Vajpayee Indian Institute of Information Technology
+            and Management, Gwalior"
+            >
+              Atal Bihari Vajpayee Indian Institute of Information Technology
+              and Management, Gwalior
+            </option>
+            <option
+              value="Indian Institute of Information Technology, Allahabad"
+            >
+              Indian Institute of Information Technology, Allahabad
+            </option>
+            <option
+              value="Indian Institute of Information Technology, Design and
+            Manufacturing, Jabalpur"
+            >
+              Indian Institute of Information Technology, Design and
+              Manufacturing, Jabalpur
+            </option>
+            <option
+              value="Indian Institute of Information Technology, Design and
+            Manufacturing, Kancheepuram"
+            >
+              Indian Institute of Information Technology, Design and
+              Manufacturing, Kancheepuram
+            </option>
+            <option
+              value="Indian Institute of Information Technology, Sri City"
+            >
+              Indian Institute of Information Technology, Sri City
+            </option>
+            <option
+              value="Indian Institute of Information Technology, Guwahati"
+            >
+              Indian Institute of Information Technology, Guwahati
+            </option>
+            <option
+              value="Indian Institute of Information Technology, Vadodara"
+            >
+              Indian Institute of Information Technology, Vadodara
+            </option>
+            <option value="Indian Institute of Information Technology, Kota">
+              Indian Institute of Information Technology, Kota
+            </option>
+            <option
+              value="Indian Institute of Information Technology, Tiruchirapalli"
+            >
+              Indian Institute of Information Technology, Tiruchirapalli
+            </option>
+            <option value="Indian Institute of Information Technology, Una">
+              Indian Institute of Information Technology, Una
+            </option>
+            <option value="Indian Institute of Information Technology, Sonepat">
+              Indian Institute of Information Technology, Sonepat
+            </option>
+            <option value="Indian Institute of Information Technology, Kalyani">
+              Indian Institute of Information Technology, Kalyani
+            </option>
+            <option value="Indian Institute of Information Technology, Lucknow">
+              Indian Institute of Information Technology, Lucknow
+            </option>
+            <option value="Indian Institute of Information Technology, Dharwad">
+              Indian Institute of Information Technology, Dharwad
+            </option>
+            <option
+              value="Indian Institute of Information Technology, Design and
+            Manufacturing, Kurnool"
+            >
+              Indian Institute of Information Technology, Design and
+              Manufacturing, Kurnool
+            </option>
+            <option
+              value="Indian Institute of Information Technology, Kottayam"
+            >
+              Indian Institute of Information Technology, Kottayam
+            </option>
+            <option value="Indian Institute of Information Technology, Manipur">
+              Indian Institute of Information Technology, Manipur
+            </option>
+            <option value="Indian Institute of Information Technology, Nagpur">
+              Indian Institute of Information Technology, Nagpur
+            </option>
+            <option value="Indian Institute of Information Technology, Pune">
+              Indian Institute of Information Technology, Pune
+            </option>
+            <option value="Indian Institute of Information Technology, Ranchi">
+              Indian Institute of Information Technology, Ranchi
+            </option>
+            <option value="Indian Institute of Information Technology, Surat">
+              Indian Institute of Information Technology, Surat
+            </option>
+            <option value="Indian Institute of Information Technology, Bhopal">
+              Indian Institute of Information Technology, Bhopal
+            </option>
+            <option
+              value="Indian Institute of Information Technology, Bhagalpur"
+            >
+              Indian Institute of Information Technology, Bhagalpur
+            </option>
+            <option
+              value="Indian Institute of Information Technology, Agartala"
+            >
+              Indian Institute of Information Technology, Agartala
+            </option>
+            <option value="Indian Institute of Information Technology, Raichur">
+              Indian Institute of Information Technology, Raichur
+            </option>
+          </select>
           <input
             type="text"
             name="Participant1"
@@ -117,7 +225,10 @@
         )
           .then((res) => res.text())
           .then((data) => alert(data));
-        document.getElementById("myForm").reset();
+        let inputs = document.querySelectorAll("input");
+        let selects = document.querySelectorAll("select");
+        inputs.forEach((input) => (input.value = ""));
+        selects.forEach((select) => (select.value = ""));
       });
     </script>
   </body>
